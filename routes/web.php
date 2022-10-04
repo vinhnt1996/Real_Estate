@@ -13,14 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' =>'admin'], function() {
-    Route::get('/login', function() {
+Route::group(['prefix' =>'admin'], function () {
+    Route::get('/login', function () {
         return view('admin.auth.login');
     });
-    Route::get('/forgot', function() {
+    Route::get('/forgot', function () {
         return view('admin.auth.forgot');
     })->name('admin.forgot');
-    Route::get('/', function() {
+    Route::get('/', function () {
         return view('admin.index');
     });
+    Route::get('user/all', function () {
+        return view("admin.users.index");
+    })->name('user.all');
+    Route::get('user/add', function () {
+        return view('admin.users.add');
+    })->name('user.add');
 });

@@ -20,16 +20,20 @@
                             <li class="menu-title">Menu</li>
 
                             <li>
-                                <a href="index.html" class="waves-effect">
-                                    <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
-                                    <span>Dashboard</span>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end"></span>
+                                    <span>Users</span>
                                 </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{ route('user.all')}}">List</a></li>
+                                    <li><a href="{{route('user.add')}}">Add</a></li>
+                                </ul>
                             </li>
 
                             <li>
                                 <a href="calendar.html" class=" waves-effect">
                                     <i class="ri-calendar-2-line"></i>
-                                    <span>Calendar</span>
+                                    <span>Categories</span>
                                 </a>
                             </li>
                 
