@@ -31,10 +31,14 @@
                             </li>
 
                             <li>
-                                <a href="calendar.html" class=" waves-effect">
-                                    <i class="ri-calendar-2-line"></i>
+                                <a href="javascript: void(0);" class=" waves-effect has-arrow">
+                                    <i class="ri-calendar-2-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Categories</span>
                                 </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{ route('category.all')}}">List</a></li>
+                                    <li><a href="{{route('category.add')}}">Add</a></li>
+                                </ul>
                             </li>
                 
                             <li>

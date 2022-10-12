@@ -37,19 +37,23 @@
                         </div>
     
                         <h4 class="text-muted text-center font-size-18"><b>Sign In</b></h4>
-    
+                        @if ( Session::has('error') )
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <strong>{{ Session::get('error') }}</strong>
+                            </div>
+                        @endif
                         <div class="p-3">
-                            <form class="form-horizontal mt-3" action="index.html">
-    
+                            <form class="form-horizontal mt-3" action="{{ route('check.login') }}" method="POST">
+                                @csrf
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control" type="text" required="" placeholder="Email">
+                                        <input class="form-control" type="email" required="" placeholder="Email" name="email">
                                     </div>
                                 </div>
     
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control" type="password" required="" placeholder="Password">
+                                        <input class="form-control" type="password" required="" placeholder="Password" name="password">
                                     </div>
                                 </div>
                                 <div class="form-group mb-3 text-center row mt-3 pt-1">
